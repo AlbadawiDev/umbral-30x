@@ -1,7 +1,0 @@
-node_modules/
-.sites-local/
-.sites/
-*.log
-artifacts/
-playwright-report/
-.DS_Store
