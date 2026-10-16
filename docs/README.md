@@ -4,6 +4,14 @@ Decisiones de pago verificables. Proyecto de Albadawi Lab para el reto Blinka de
 
 Umbral recibe facturas ficticias como texto de correo o chat, CSV o JSON. Un agente determinista contrasta cada factura con reglas configurables y propone pagar, frenar o pedir revisión humana. Cada decisión conserva los hechos, las comprobaciones y la versión de las reglas. No conecta con bancos ni mueve dinero.
 
+## Demo y evidencia
+
+- [Abrir la aplicación](https://albadawidev.github.io/umbral-30x/)
+- [Ver el recorrido de 96 segundos](https://albadawidev.github.io/umbral-30x/video/)
+- [Resultados de verificación](docs/VALIDATION.md)
+
+El video presenta capturas reales de la aplicación con subtítulos en español y sin voz. Incluye un duplicado bloqueado, una revisión frenada por falta de capacidad, una aprobación documentada de otro caso y 16 escenarios contrastados con sus resultados esperados. Las 57 pruebas automatizadas se ejecutan con `npm test`.
+
 ## Ejecutar
 
 Requiere Node.js 24 para ejecutar las pruebas y preparar los archivos estáticos. La aplicación publicada funciona en un navegador moderno sin instalar paquetes ni obtener claves API.
