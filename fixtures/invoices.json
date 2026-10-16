@@ -1,0 +1,22 @@
+[
+  {
+    "number": "NST-JSON-01",
+    "beneficiaryId": "norte",
+    "beneficiaryName": "Norte Studio (ficticio)",
+    "amount": "125.50",
+    "currency": "USD",
+    "dueDate": "2026-10-18",
+    "agreementId": "DES-01",
+    "description": "Diseño ficticio. Este registro no autoriza una transferencia real."
+  },
+  {
+    "number": "LIR-JSON-01",
+    "beneficiaryId": "lirio",
+    "beneficiaryName": "Lirio Laboratorio (ficticio)",
+    "amount": "100.00",
+    "currency": "USD",
+    "dueDate": "2026-10-20",
+    "agreementId": "NEW-01",
+    "description": "Proveedor ficticio no incluido en la lista permitida. Revisión humana."
+  }
+]

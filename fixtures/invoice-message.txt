@@ -1,0 +1,9 @@
+Mensaje sintético para Umbral. Todas las entidades son ficticias.
+Factura: NST-TXT-01
+Beneficiario ID: norte
+Beneficiario: Norte Studio (ficticio)
+Monto: 125.50
+Moneda: USD
+Vencimiento: 2026-10-18
+Acuerdo: DES-01
+Concepto: Diseño de una tarjeta de demostración ficticia.

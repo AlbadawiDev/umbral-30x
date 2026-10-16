@@ -1,0 +1,4 @@
+number,beneficiaryId,beneficiaryName,amount,currency,dueDate,agreementId,description
+NST-CSV-01,norte,Norte Studio (ficticio),125.50,USD,2026-10-18,DES-01,"Diseño de muestra, sin pago real"
+AND-CSV-01,andina,Andina Cloud (ficticio),850.00,USD,2026-10-19,CLOUD-01,"Revisión humana por superar 500.00 USD"
+BRI-CSV-01,brisa,Brisa Contenido (ficticio),200.00,EUR,2026-10-20,COPY-01,"Frenar: moneda distinta a USD"

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#183e35">
+  <meta name="description" content="Umbral: un laboratorio local de decisiones de facturas, explicables y auditables. Demostración con datos ficticios.">
+  <title>Umbral · Decisiones con criterio</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Ir al contenido</a>
+  <div id="app"></div>
+  <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <dialog id="import-dialog" aria-labelledby="import-title">
+    <form method="dialog" class="dialog-top"><span class="eyebrow">NUEVA ENTRADA</span><button class="icon-button" aria-label="Cerrar importación">×</button></form>
+    <h2 id="import-title">De un mensaje a una decisión.</h2>
+    <p class="muted">Pega una factura ficticia o importa un archivo TXT, CSV o JSON. El análisis es local y determinista. No admite imágenes ni PDF.</p>
+    <label class="upload-zone" for="invoice-file"><span class="upload-symbol">↥</span><strong>Selecciona un archivo</strong><span>TXT, CSV o JSON · datos ficticios</span><input id="invoice-file" type="file" accept=".txt,.csv,.json,text/plain,text/csv,application/json"></label>
+    <div class="or-divider"><span>O PEGA EL TEXTO</span></div>
+    <label class="field-label" for="invoice-text">Mensaje o factura</label>
+    <textarea id="invoice-text" rows="8" spellcheck="false" placeholder="Factura: FAC-021&#10;Beneficiario ID: norte&#10;Beneficiario: Norte Studio (ficticio)&#10;Monto: 120.00&#10;Moneda: USD&#10;Vencimiento: 2026-10-20&#10;Convenio: DES-01"></textarea>
+    <p id="import-error" class="form-error" role="alert"></p>
+    <div class="dialog-actions"><button class="button secondary" id="paste-example" type="button">Pegar ejemplo</button><button class="button primary" id="import-text-button" type="button">Importar mensaje <span aria-hidden="true">↗</span></button></div>
+  </dialog>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><h2 id="confirm-title">Restablecer demostración</h2><p>Se borrarán las facturas, decisiones y reglas guardadas en este navegador. Esta acción no afecta ningún sistema externo.</p><div class="dialog-actions"><button class="button secondary" id="cancel-reset">Cancelar</button><button class="button danger" id="confirm-reset">Restablecer datos</button></div></dialog>
+  <script type="module" src="./src/app.js"></script>
+  <noscript><p>Activa JavaScript para abrir la demostración local de Umbral.</p></noscript>
+</body>
+</html>
