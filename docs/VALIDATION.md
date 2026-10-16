@@ -21,11 +21,13 @@ La prueba se realizó en la publicación de GitHub Pages, en un navegador de esc
 4. El panel Pruebas mostró 16 de 16 escenarios coincidentes e idempotencia verificada. Ejecutarlo no alteró las 17 facturas de la bandeja.
 5. La Bitácora mostró 22 eventos. La exportación JSON inició y completó la descarga del archivo en el navegador.
 6. Tras recargar la página, se conservaron las 17 facturas, la política versión 2 y la revisión local 7.
+7. Después de publicar la corrección y recargar, la factura `AND-002`, con fecha inexistente `2026-02-30`, mostró «Fecha no válida» y continuó en revisión.
+8. El reproductor público cargó el MP4 completo de 96 segundos, sin errores de medios, y permitió iniciar la reproducción. El recorrido emplea ocho capturas reales y subtítulos en español, sin voz.
 
 La vista previa interna falló al iniciar su proceso aislado con `bwrap`. Ese intento no cuenta como una prueba de navegador aprobada. La comprobación posterior en GitHub Pages sí permitió verificar los recorridos anteriores y resolvió el impedimento de acceso para la QA final.
 
 ## Alcance y comprobación pendiente
 
 - No se comprobó la interfaz en un dispositivo móvil. El diseño responsive implementado no constituye evidencia de QA móvil.
-- Durante la revisión pública se detectó que la fecha inexistente `2026-02-30` se mostraba como una fecha de marzo. El motor la mantuvo correctamente en revisión. La presentación se corrigió en `src/app.js` para mostrar «Fecha no válida» sin normalizar fechas inexistentes. La confirmación visual de esta corrección en la publicación actualizada queda pendiente.
+- Durante la revisión pública se detectó que la fecha inexistente `2026-02-30` se mostraba como una fecha de marzo. El motor la mantuvo correctamente en revisión. La presentación se corrigió en `src/app.js` y se confirmó en la publicación actualizada: muestra «Fecha no válida» sin normalizar fechas inexistentes.
 - La persistencia y la bitácora pertenecen al navegador. Esta comprobación no acredita un servicio bancario, transferencias reales ni un historial inalterable.
