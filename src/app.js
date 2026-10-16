@@ -55,8 +55,17 @@ function toast(message, error = false) {
 }
 function dateLabel(iso, includeTime = false) {
   if (!iso) return 'Sin fecha';
+  if (typeof iso !== 'string') return 'Fecha no válida';
+  const parts = /^(\d{4})-(\d{2})-(\d{2})(?:$|T)/.exec(iso);
+  if (!parts) return 'Fecha no válida';
+  const [, yearText, monthText, dayText] = parts;
+  const year = Number(yearText), month = Number(monthText), day = Number(dayText);
+  const leap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+  const daysInMonth = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  if (year < 1 || month < 1 || month > 12 || day < 1 || day > daysInMonth[month - 1]) return 'Fecha no válida';
+  if (iso.length !== 10 && !/^\d{4}-\d{2}-\d{2}T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d(?:\.\d{1,3})?(?:Z|[+-](?:[01]\d|2[0-3]):[0-5]\d)$/.test(iso)) return 'Fecha no válida';
   const date = new Date(iso.length === 10 ? `${iso}T12:00:00Z` : iso);
-  if (Number.isNaN(date.getTime())) return iso;
+  if (Number.isNaN(date.getTime())) return 'Fecha no válida';
   return new Intl.DateTimeFormat('es-VE', {day:'2-digit',month:'short', ...(includeTime ? {hour:'2-digit',minute:'2-digit'} : {}), timeZone:'America/Caracas'}).format(date).replace('.', '');
 }
 function moneyValue(invoice) { try { return formatMoney(parseMoney(invoice.amount), invoice.currency || 'USD'); } catch { return invoice.amount ? `${invoice.amount} ${invoice.currency}` : 'Monto pendiente'; } }
