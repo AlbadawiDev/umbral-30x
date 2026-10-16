@@ -1,0 +1,41 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:12.000
+Umbral convierte facturas en decisiones explicables. Demostración local con datos
+ficticios. No mueve dinero.
+
+2
+00:00:12.000 --> 00:00:24.000
+El motor comprueba cada factura contra reglas explícitas. Decide pagar de forma
+simulada, frenar o solicitar revisión humana.
+
+3
+00:00:24.000 --> 00:00:36.000
+Una factura repetida del mismo beneficiario se frena. La decisión explica que ya
+existe una reserva simulada para ese cobro.
+
+4
+00:00:36.000 --> 00:00:48.000
+La revisión humana vuelve a comprobar las reservas. Aquí frena la factura: el
+presupuesto y el saldo son insuficientes, aunque una persona la revise.
+
+5
+00:00:48.000 --> 00:01:00.000
+La empresa define el umbral automático, el límite por factura, el presupuesto, el
+saldo simulado y los beneficiarios permitidos.
+
+6
+00:01:00.000 --> 00:01:12.000
+Otro caso obtiene aprobación humana con las reglas actuales y capacidad suficiente.
+El resultado es una reserva simulada, nunca una transferencia.
+
+7
+00:01:12.000 --> 00:01:24.000
+El banco compara resultados esperados y obtenidos en 16 escenarios ficticios. Esta
+ejecución coincide en los 16 casos, sin modificar la bandeja.
+
+8
+00:01:24.000 --> 00:01:36.000
+La bitácora conserva decisiones, revisiones y cambios de política. Cada resultado
+deja una explicación local que se consulta y exporta.

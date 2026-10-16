@@ -6,7 +6,7 @@ await mkdir(dist,{recursive:true});
 for(const name of ['index.html','styles.css']) await copyFile(resolve(root,name),resolve(dist,name));
 for(const name of ['src','fixtures']) await cp(resolve(root,name),resolve(dist,name),{recursive:true});
 await mkdir(resolve(dist,'docs'),{recursive:true});
-for(const name of ['README.md','docs/DEMO.md','docs/SECURITY.md']) {
+for(const name of ['README.md','docs/DEMO.md','docs/SECURITY.md','docs/VALIDATION.md']) {
   try { await copyFile(resolve(root,name),resolve(dist,'docs',name.split('/').at(-1))); }
   catch(e) { if(e.code!=='ENOENT') throw e; }
 }

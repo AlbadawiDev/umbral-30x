@@ -1,0 +1,80 @@
+{
+  "file": "umbral-demo.mp4",
+  "duration_seconds": 96.0,
+  "bytes": 1077904,
+  "sha256": "168d6f499372a1294c93dc32bc5c60c9b520afac6db9e891cc4aa55189bc8c2d",
+  "source": "Capturas reales del navegador. Datos ficticios. Sin pagos reales.",
+  "scenes": [
+    {
+      "frame": "01_inicio.jpg",
+      "caption": "Umbral convierte facturas en decisiones explicables. Demostración local con datos ficticios. No mueve dinero.",
+      "start": 0.0,
+      "end": 12.0,
+      "capture_sha256": "6be48917775b305ecfbd3c4c86421b00eadd412a1f6b19d51cd53dfc217becba"
+    },
+    {
+      "frame": "02_procesamiento.jpg",
+      "caption": "El motor comprueba cada factura contra reglas explícitas. Decide pagar de forma simulada, frenar o solicitar revisión humana.",
+      "start": 12.0,
+      "end": 24.0,
+      "capture_sha256": "d1e52e0b5889e5a2e6cc9accb1258655cdb2d3c78641d3f2e67565ee8c59607e"
+    },
+    {
+      "frame": "03_duplicado.jpg",
+      "caption": "Una factura repetida del mismo beneficiario se frena. La decisión explica que ya existe una reserva simulada para ese cobro.",
+      "start": 24.0,
+      "end": 36.0,
+      "capture_sha256": "23fdb3453bcf91329e43f4fffb94c17d32d92a1add69cec8029beebe23fdc534"
+    },
+    {
+      "frame": "04_revision_segura.jpg",
+      "caption": "La revisión humana vuelve a comprobar las reservas. Aquí frena la factura: el presupuesto y el saldo son insuficientes, aunque una persona la revise.",
+      "start": 36.0,
+      "end": 48.0,
+      "capture_sha256": "e6f37c2c5044dd3852175b37811f62cb9e800eb6e265a20c3c9ce4ba13a1bf8e"
+    },
+    {
+      "frame": "05_reglas.jpg",
+      "caption": "La empresa define el umbral automático, el límite por factura, el presupuesto, el saldo simulado y los beneficiarios permitidos.",
+      "start": 48.0,
+      "end": 60.0,
+      "capture_sha256": "ce50d5bc38b7adbda1f4b652bc08231da9440351d9fe27700fb04e8ff56f2eac"
+    },
+    {
+      "frame": "06_aprobacion.jpg",
+      "caption": "Otro caso obtiene aprobación humana con las reglas actuales y capacidad suficiente. El resultado es una reserva simulada, nunca una transferencia.",
+      "start": 60.0,
+      "end": 72.0,
+      "capture_sha256": "56e4111723cdde6187563a249f6e108893e26c1681705daf183458e89b1322e1"
+    },
+    {
+      "frame": "07_pruebas.jpg",
+      "caption": "El banco compara resultados esperados y obtenidos en 16 escenarios ficticios. Esta ejecución coincide en los 16 casos, sin modificar la bandeja.",
+      "start": 72.0,
+      "end": 84.0,
+      "capture_sha256": "68c4c479c5184c3a42376e66c91b872d91f3febf5f4f0258edc2c2e7f8fc38fb"
+    },
+    {
+      "frame": "08_bitacora.jpg",
+      "caption": "La bitácora conserva decisiones, revisiones y cambios de política. Cada resultado deja una explicación local que se consulta y exporta.",
+      "start": 84.0,
+      "end": 96.0,
+      "capture_sha256": "eff86ea5a10c6accc5a8bebd7f1e8298689d57a4081379a86674175ec3f3926d"
+    }
+  ],
+  "probe": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1600,
+        "height": 1200
+      }
+    ],
+    "format": {
+      "duration": "96.000000",
+      "size": "1077904"
+    }
+  }
+}
